@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Text, View, Button, TouchableOpacity, StyleSheet } from "react-native";
 import "./alert.css";
 
-import SwapiService from "./services/swapi-service";
+import SwapiService from "../services/swapi-service";
 
 class WeatherPage extends Component {
   state = {
