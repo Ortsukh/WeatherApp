@@ -42,7 +42,6 @@ class Table1 extends Component {
   infoData(id) {
     const { modal } = this.state;
     const info = this.props.data[id];
-    console.log(info);
     if (!modal) {
       return null;
     } else {

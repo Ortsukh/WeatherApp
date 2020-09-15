@@ -23,13 +23,11 @@ class WeatherPage extends Component {
   updateItem() {
     this.swapiService.getAdress().then((data) => {
       this.setState({ long: data.long, lat: data.lat });
-      console.log(this.state);
       this.updateData();
     });
   }
   updateData() {
     const { lat, long } = this.state;
-    console.log(lat);
     this.swapiService
       .getPlace(lat, long)
       .then((data) => {
@@ -48,11 +46,8 @@ class WeatherPage extends Component {
               date: nowDate,
               time: nowTime,
             });
-            console.log(this.state);
           })
           .then(() => {
-            console.log(this.state);
-
             let dataArr = JSON.parse(localStorage.getItem("data"));
             if (!dataArr) {
               dataArr = [];
@@ -66,7 +61,6 @@ class WeatherPage extends Component {
     const { modal, lat, long } = this.state;
 
     this.swapiService.getWeatherHourly(lat, long).then((data) => {
-      console.log(new Date(1600171200 * 1000).toString().slice(16, 24));
       this.setState({ modal: true, hourlyWeather: data.hourly });
     });
   }
@@ -74,7 +68,6 @@ class WeatherPage extends Component {
     return new Date(s * 1000).toString().slice(16, 21);
   }
   infoData() {
-    console.log(this.state);
     const { modal, hourlyWeather, time } = this.state;
 
     if (!modal) {
@@ -84,7 +77,6 @@ class WeatherPage extends Component {
       for (let i = 1; i < 6; i++) {
         nextTime.push(this.convertTime(hourlyWeather[i].dt));
       }
-      console.log(nextTime);
 
       return (
         <div className=" alertm_all">

@@ -4,7 +4,6 @@ export default class SwapiService {
       const pos = await new Promise((resolve, reject) => {
         navigator.geolocation.getCurrentPosition(resolve, reject);
       });
-      console.log(pos);
       return {
         long: pos.coords.longitude,
         lat: pos.coords.latitude,

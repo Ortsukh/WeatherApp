@@ -8,7 +8,6 @@ if (localStorage.getItem("data")) {
   data = [{ long: "", lat: "", adress: "", weather: "  ", temp: "" }];
 }
 
-console.log(data);
 class Table extends Component {
   render() {
     return (
