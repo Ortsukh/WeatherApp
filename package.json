@@ -8,11 +8,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^5.8.0",
+    "@react-navigation/native": "^5.7.3",
     "expo": "~38.0.9",
     "expo-splash-screen": "^0.5.0",
     "expo-status-bar": "^1.0.0",
     "expo-updates": "~0.2.10",
     "react": "~16.11.0",
+    "react-bootstrap-table-next": "^4.0.3",
     "react-dom": "~16.11.0",
     "react-native": "~0.62.2",
     "react-native-gesture-handler": "~1.6.1",

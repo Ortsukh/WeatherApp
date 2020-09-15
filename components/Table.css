@@ -1,0 +1,22 @@
+.Table-header {
+  background-color: #ccc;
+  color: blue;
+  padding: 10px;
+  text-align: center;
+}
+
+.Table {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.Other-Row {
+  background-color: greenyellow;
+}
+.table {
+  width: 100%;
+}
+.table td {
+  border: solid 1px;
+  border-color: #ccc;
+}
